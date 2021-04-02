@@ -16,6 +16,8 @@ from pathlib import Path
 import dj_database_url
 from django.conf import settings
 
+import django_heroku
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -86,20 +88,13 @@ WSGI_APPLICATION = 'news.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #
 #     'default': {
 #
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #
-#         'NAME': 'chat_room',
+#         'NAME': 'django_news_crud',
 #
 #         'USER': 'postgres',
 #
@@ -112,6 +107,13 @@ DATABASES = {
 #     }
 #
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
@@ -200,5 +202,4 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-import django_heroku
 django_heroku.settings(locals())
