@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/news/Dcokerfile">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/news/crud/admin.py">
           <value>
             <set />
@@ -48,7 +53,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/news/news/wsgi.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/news/news/yasg.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../osf_tesst/test_osf/osf_numbers/serializers.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../osf_tesst/test_osf/osf_numbers/urls.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../osf_tesst/test_osf/test_osf/settings.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../osf_tesst/test_osf/test_osf/urls.py">
           <value>
             <set />
           </value>

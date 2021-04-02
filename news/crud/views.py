@@ -1,16 +1,23 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import generics, permissions
+
 # Create your views here.
 from rest_framework.exceptions import ValidationError
 
+
 from crud.models import Post, Comment, Vote
-from crud.serializers import (PostSerializer,
-                              CreatePostSerializer,
-                              CommentSerializer, VoteSerializer)
+from crud.serializers import (
+    PostSerializer,
+    CreatePostSerializer,
+    CommentSerializer,
+    VoteSerializer,
+)
 
 
 class CommentCreateView(generics.CreateAPIView):
     """Create review"""
+
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -56,4 +63,17 @@ class VoteCreateView(generics.CreateAPIView):
     def perform_create(self, serializer):
         if self.get_queryset().exists():
             raise ValidationError("Already upvoted!")
-        serializer.save(voter=self.request.user, post=Post.objects.get(pk=self.kwargs['pk']))
+        serializer.save(
+            voter=self.request.user, post=Post.objects.get(pk=self.kwargs["pk"])
+        )
+
+
+def sum_numbers(request):
+    a = int(request.GET.get("a"))
+    b = int(request.GET.get("b"))
+    j = 0
+
+    for i in range(a, b + 1):
+        j += i
+
+    return HttpResponse(j)
