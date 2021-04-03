@@ -1,10 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, status
 
 # Create your views here.
 from rest_framework.exceptions import ValidationError
-
+from rest_framework.response import Response
 
 from crud.models import Post, Comment, Vote
 from crud.serializers import (
@@ -74,5 +74,9 @@ class VoteCreateView(generics.CreateAPIView):
         )
 
 
-def update_something():
-    print("this function runs every 10 seconds")
+class VotesDeleteView(generics.DestroyAPIView):
+
+    def delete(self, *args, **kwargs):
+        votes = Vote.objects.all()
+        votes.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

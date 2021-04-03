@@ -43,7 +43,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/news/crud/commands/delete_votes.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/news/crud/models.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/news/crud/scheduler/__init__.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/news/crud/scheduler/votes_scheduler.py">
           <value>
             <set />
           </value>
