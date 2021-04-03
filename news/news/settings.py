@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     "djoser",
     "rest_framework.authtoken",
     "drf_yasg",
-    'django_apscheduler',
     "crud",
 ]
 
