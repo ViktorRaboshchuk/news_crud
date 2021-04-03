@@ -1,6 +1,6 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 
-from ..views import VotesDeleteView
+from crud.views import *
 
 
 def start():
