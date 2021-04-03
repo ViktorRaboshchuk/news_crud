@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "djoser",
     "rest_framework.authtoken",
     "drf_yasg",
-    "crud",
+    "crud.apps.CrudConfig",
 ]
 
 MIDDLEWARE = [

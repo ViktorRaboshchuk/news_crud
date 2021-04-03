@@ -10,4 +10,5 @@ urlpatterns = [
     path("posts/", views.PostListView.as_view()),
     path("comments/", views.CommentListView.as_view()),
     path("post/<int:pk>/vote/", views.VoteCreateView.as_view()),
+
 ]
