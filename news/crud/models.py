@@ -11,7 +11,6 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, related_name="post_author_name", on_delete=models.CASCADE
     )
-    # upvotes_amount
 
 
 class Comment(models.Model):

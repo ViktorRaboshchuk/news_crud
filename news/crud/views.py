@@ -12,6 +12,7 @@ from crud.serializers import (
     CreatePostSerializer,
     CommentSerializer,
     VoteSerializer,
+    CreateCommentSerializer,
 )
 
 
@@ -19,15 +20,20 @@ class CommentCreateView(generics.CreateAPIView):
     """Create review"""
 
     queryset = Comment.objects.all()
+    serializer_class = CreateCommentSerializer
+    # permission_classes = [permissions.IsAuthenticated]
+
+
+class CommentListView(generics.ListAPIView):
+    queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    permission_classes = [permissions.IsAuthenticated]
 
 
 class CommentRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 class PostCreateView(generics.ListCreateAPIView):
@@ -68,12 +74,3 @@ class VoteCreateView(generics.CreateAPIView):
         )
 
 
-def sum_numbers(request):
-    a = int(request.GET.get("a"))
-    b = int(request.GET.get("b"))
-    j = 0
-
-    for i in range(a, b + 1):
-        j += i
-
-    return HttpResponse(j)

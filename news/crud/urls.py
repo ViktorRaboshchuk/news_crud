@@ -8,6 +8,6 @@ urlpatterns = [
     path("new_post/", views.PostCreateView.as_view()),
     path("new_comment/", views.CommentCreateView.as_view()),
     path("posts/", views.PostListView.as_view()),
+    path("comments/", views.CommentListView.as_view()),
     path("post/<int:pk>/vote/", views.VoteCreateView.as_view()),
-    path("endpoint/", views.sum_numbers),
 ]
