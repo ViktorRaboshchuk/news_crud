@@ -15,6 +15,7 @@ from crud.serializers import (
     CreateCommentSerializer,
 )
 
+
 class CommentCreateView(generics.CreateAPIView):
     """Create review"""
 
@@ -73,3 +74,5 @@ class VoteCreateView(generics.CreateAPIView):
         )
 
 
+def update_something():
+    print("this function runs every 10 seconds")
