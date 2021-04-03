@@ -2,6 +2,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 
 def start():
+    print('BLAAA 1')
     scheduler = BackgroundScheduler()
     from crud.views import VotesDeleteView
     vote_up = VotesDeleteView()

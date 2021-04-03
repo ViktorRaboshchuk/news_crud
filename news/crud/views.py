@@ -75,6 +75,7 @@ class VoteCreateView(generics.CreateAPIView):
 
 
 class VotesDeleteView(generics.DestroyAPIView):
+    print('BLAAA 2')
 
     def delete(self, *args, **kwargs):
         votes = Vote.objects.all()
