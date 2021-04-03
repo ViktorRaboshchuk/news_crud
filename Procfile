@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath news news.wsgi --log-file -
+web: python news/manage.py runserver 0.0.0.0:$PORT --noreload --log-file -
