@@ -15,7 +15,6 @@ from crud.serializers import (
     CreateCommentSerializer,
 )
 
-
 class CommentCreateView(generics.CreateAPIView):
     """Create review"""
 
