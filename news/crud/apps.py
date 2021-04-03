@@ -6,6 +6,6 @@ class CrudConfig(AppConfig):
 
     def ready(self):
         print("Starting scheduler...")
-        from .scheduler import votes_scheduler
+        from crud import votes_scheduler
         votes_scheduler.start()
 
