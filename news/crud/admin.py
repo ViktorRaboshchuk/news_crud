@@ -1,3 +1,4 @@
+"""Defining our Models in Admin panel"""
 from django.contrib import admin
 
 from crud.models import Post, Comment, Vote
