@@ -8,7 +8,10 @@ https://documenter.getpostman.com/view/14798392/TzCQa5z8
 
 **Deployed Heroku application:**
 
-https://dashboard.heroku.com/apps/django-main-news-crud
+https://django-main-news-crud.herokuapp.com/
+
+For application functionality visit:
+https://django-main-news-crud.herokuapp.com/api/
 
 **Run on Docker:**
 
