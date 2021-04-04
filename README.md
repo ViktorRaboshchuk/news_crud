@@ -2,6 +2,11 @@
 
 Django Rest Framework project that implements CRUD functionallity.
 
+Code formatted using:
+- [Black](https://github.com/psf/black)
+- Flake8 
+- pyright
+
 **Postman Documentation:**
 
 https://documenter.getpostman.com/view/14798392/TzCQa5z8
