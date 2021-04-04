@@ -11,6 +11,7 @@ https://documenter.getpostman.com/view/14798392/TzCQa5z8
 https://django-main-news-crud.herokuapp.com/
 
 For application functionality visit:
+
 https://django-main-news-crud.herokuapp.com/api/
 
 **Run on Docker:**
