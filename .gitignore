@@ -13,3 +13,6 @@ local_settings.py
 
 .env
 db.sqlite3
+
+_migrations/*
+!_migrations/__init__.py
