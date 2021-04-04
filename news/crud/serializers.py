@@ -21,10 +21,10 @@ class UserSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     """Serializes all comments"""
-
+    author = UserSerializer()
     class Meta:
         model = Comment
-        fields = ("id", "content", "creation_date")
+        fields = ("id", "author", "content", "creation_date")
 
 
 class CreateCommentSerializer(serializers.ModelSerializer):
