@@ -7,7 +7,7 @@ RUN mkdir /news_service
 WORKDIR /news_service
 
 # Copy the current directory contents into the container at /music_service
-ADD ../../Downloads /news_service
+ADD . /news_service
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
