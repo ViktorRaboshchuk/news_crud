@@ -16,3 +16,5 @@ https://dashboard.heroku.com/apps/django-main-news-crud
 docker-compose run web python news/manage.py migrate   
 docker-compose up
 ```
+
+After docker-compose up go to http://0.0.0.0:8000/ or use link to Heroku project. 
